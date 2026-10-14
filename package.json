@@ -1,0 +1,28 @@
+{
+  "name": "@skilleddragon/minilab-agent-device-evidence",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "SkilledDragon minilab: agent-device keyless Linux evidence (doctor/devices/client + upstream CI cohort)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
+  "packageManager": "bun@1.4.3",
+  "scripts": {
+    "test": "bun test --max-concurrency=1",
+    "typecheck": "tsc --noEmit",
+    "collect": "bun run scripts/collect-evidence.ts",
+    "upstream": "bash scripts/upstream-ci.sh",
+    "fetch:upstream": "bash scripts/fetch-upstream.sh",
+    "check:skills": "bun run scripts/check-skills.ts",
+    "audit": "bun audit"
+  },
+  "devDependencies": {
+    "@types/bun": "1.4.3",
+    "typescript": "5.9.3"
+  },
+  "dependencies": {
+    "agent-device": "0.21.27"
+  }
+}
