@@ -1,0 +1,7 @@
+# Upstream callstack/agent-device@1658d637d64f pnpm-lock.yaml.
+# Lab does not patch upstream lockfiles; ignore until the pin upgrades.
+# Re-evaluate when bumping PIN in scripts/fetch-upstream.sh / upstream-ci.sh.
+
+[[IgnoredVulns]]
+id = "GHSA-hrr3-gc8f-f4qj"
+reason = "Transitive fast-uri@3.1.7 in pinned upstream agent-device pnpm-lock; not introduced by this lab"

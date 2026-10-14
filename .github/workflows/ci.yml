@@ -135,7 +135,7 @@ jobs:
           chmod +x osv-scanner
 
       - name: osv-scanner on upstream pnpm-lock.yaml
-        run: ./osv-scanner scan --lockfile vendor/agent-device/pnpm-lock.yaml
+        run: ./osv-scanner scan --config osv-scanner.toml --lockfile vendor/agent-device/pnpm-lock.yaml
 
       - name: Skills frontmatter
         run: bun run check:skills
